@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-container": "#5c647a", "on-tertiary-fixed-variant": "#005049", "tertiary-fixed-dim": "#6bd8cb", "error": "#ba1a1a", "on-error": "#ffffff", "secondary-fixed-dim": "#bec6e0", "on-background": "#0b1c30", "primary-fixed-dim": "#68dba9", "on-surface": "#0b1c30", "surface-dim": "#cbdbf5", "surface-container-highest": "#d3e4fe", "surface-variant": "#d3e4fe", "inverse-primary": "#68dba9", "on-tertiary": "#ffffff", "tertiary-container": "#008378", "tertiary-fixed": "#89f5e7", "error-container": "#ffdad6", "inverse-surface": "#213145", "on-secondary-fixed-variant": "#3f465c", "on-primary-container": "#f5fff7", "inverse-on-surface": "#eaf1ff", "on-primary-fixed": "#002114", "primary-fixed": "#85f8c4", "on-secondary": "#ffffff", "surface-container": "#e5eeff", "surface-bright": "#f8f9ff", "tertiary": "#00685f", "primary-container": "#00855d", "secondary-container": "#dae2fd", "secondary-fixed": "#dae2fd", "surface-container-high": "#dce9ff", "primary": "#006948", "surface-container-low": "#eff4ff", "secondary": "#565e74", "on-tertiary-fixed": "#00201d", "surface-tint": "#006c4a", "on-secondary-fixed": "#131b2e", "on-primary-fixed-variant": "#005137", "background": "#f8f9ff", "on-surface-variant": "#3d4a42", "outline": "#6d7a72", "surface": "#f8f9ff", "on-error-container": "#93000a", "outline-variant": "#bccac0", "on-tertiary-container": "#f4fffc", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-desktop": "2rem", "gutter": "1rem", "space-lg": "1.25rem", "space-xl": "2rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "space-md": "0.75rem", "margin": "1rem" }, "fontFamily": { "code-meta": ["JetBrains Mono"], "headline-md": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "code-editor": ["JetBrains Mono"], "body-lg": ["Inter"] }, "fontSize": { "code-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "16px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "500" }], "code-editor": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="flex flex-col"><div class="h-14 px-gutter flex items-center gap-space-sm"><div class="w-7 h-7 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[18px]">content_paste</span></div><span class="font-headline-md text-headline-md font-semibold tracking-tight text-on-surface">ClipSync</span><span class="font-code-meta text-code-meta text-primary bg-primary-fixed/40 px-1.5 py-0.5 rounded-full ml-auto">v2.4</span></div><div class="px-gutter pt-space-md pb-space-sm"><button class="w-full flex items-center justify-center gap-space-sm bg-primary text-on-primary py-space-sm px-space-md rounded-lg font-label-md text-label-md shadow-sm transition-all hover:bg-primary-container active:scale-[0.98]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>New Snippet</span><span class="ml-auto font-code-meta text-code-meta opacity-75">⌘N</span></button></div><div class="px-gutter py-space-xs"><div class="font-label-sm text-label-sm uppercase tracking-wider text-outline px-space-xs mb-space-xs">Workspace</div><nav class="space-y-1" data-active-classes="bg-surface-container text-on-surface font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg transition-colors bg-surface-container text-on-surface font-semibold" data-path="live-clipboard" href="#"><span class="material-symbols-outlined text-[20px]">stream</span><span class="flex-1 truncate">Live Clipboard</span><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface" data-path="history-archive" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="flex-1 truncate">Clip History</span><span class="font-code-meta text-code-meta text-outline">48</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface" data-path="pinned-clips" href="#"><span class="material-symbols-outlined text-[20px]">push_pin</span><span class="flex-1 truncate">Pinned Clips</span><span class="font-code-meta text-code-meta text-outline">7</span></a></nav></div><div class="px-gutter pt-space-md"><div class="font-label-sm text-label-sm uppercase tracking-wider text-outline px-space-xs mb-space-xs">Channels</div><nav class="space-y-1" data-active-classes="bg-surface-container text-on-surface font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface" data-path="device-sync" href="#"><span class="material-symbols-outlined text-[20px]">devices</span><span class="flex-1 truncate">Connected Devices</span><span class="font-code-meta text-code-meta text-primary bg-primary-fixed/40 px-1 rounded-sm">3</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface" data-path="room-security" href="#"><span class="material-symbols-outlined text-[20px]">lock_open</span><span class="flex-1 truncate">E2E Encryption</span></a></nav></div></div><div class="p-gutter bg-surface-container-low/50"><div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)] flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">sync_alt</span><div class="flex flex-col"><span class="font-label-sm text-label-sm font-semibold text-on-surface">P2P Sync</span><span class="font-code-meta text-code-meta text-outline">12ms latency</span></div></div><div class="w-2 h-2 rounded-full bg-primary"></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-14 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.02)] z-30 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container px-space-sm py-1 rounded-full cursor-pointer transition-colors"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-code-meta text-code-meta text-on-surface-variant font-medium">clipsync.live/r/942-alpha</span><span class="material-symbols-outlined text-[15px] text-outline hover:text-on-surface">content_copy</span></div><div class="hidden sm:flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary-fixed/30 text-on-primary-fixed font-code-meta text-code-meta"><span class="material-symbols-outlined text-[14px] text-primary">bolt</span><span>Instant Sync Live</span></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-low hover:bg-surface-container font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">qr_code_2</span><span>Pair Mobile</span></button><button class="flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-low hover:bg-surface-container font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">share</span><span>Invite</span></button><button aria-label="Toggle Theme" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">light_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="flex-1 pt-14 bg-background w-full"><div class="flex flex-col w-full relative">
+<div class="px-gutter-desktop py-space-sm bg-surface-container-lowest/80 backdrop-blur-md flex flex-wrap items-center justify-between gap-space-sm shadow-[0_1px_4px_rgba(11,28,48,0.02)]">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-code-meta text-code-meta text-primary font-medium tracking-tight">ACTIVE CLIP</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-low hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors group cursor-pointer" id="slugPill" title="Click to rename slug">
+<span class="font-code-meta text-code-meta text-outline select-none">clipsync.app/</span>
+<span class="font-code-meta text-code-meta font-semibold text-on-surface" id="slugText">dev-ssh-staging</span>
+<span class="material-symbols-outlined text-[14px] text-outline group-hover:text-primary transition-colors">edit</span>
+</div>
+<button class="flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-all active:scale-95" id="copyUrlBtn" title="Copy room link" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">link</span>
+<span class="font-label-sm text-label-sm">Copy Link</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center bg-surface-container-low p-0.5 rounded-lg">
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm transition-all" id="modePlain" type="button">Plain</button>
+<button class="px-2.5 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" id="modeCode" type="button">Code / MD</button>
+</div>
+<div class="relative">
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" id="expiryDropdownBtn" type="button">
+<span class="material-symbols-outlined text-[15px] text-outline">timer</span>
+<span id="currentExpiry">24 hours</span>
+<span class="material-symbols-outlined text-[14px] text-outline">expand_more</span>
+</button>
+<div class="hidden absolute right-0 top-full mt-1.5 w-40 bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_-4px_rgba(15,23,42,0.08)] py-1.5 z-50" id="expiryMenu">
+<button class="expiry-option w-full text-left px-3 py-1.5 font-label-sm text-label-sm text-on-surface hover:bg-surface-container-low flex items-center justify-between" data-val="1 hour" type="button"><span>1 hour</span></button>
+<button class="expiry-option w-full text-left px-3 py-1.5 font-label-sm text-label-sm text-on-surface hover:bg-surface-container-low flex items-center justify-between" data-val="24 hours" type="button"><span>24 hours</span><span class="material-symbols-outlined text-[14px] text-primary">check</span></button>
+<button class="expiry-option w-full text-left px-3 py-1.5 font-label-sm text-label-sm text-on-surface hover:bg-surface-container-low flex items-center justify-between" data-val="7 days" type="button"><span>7 days</span></button>
+<button class="expiry-option w-full text-left px-3 py-1.5 font-label-sm text-label-sm text-on-surface hover:bg-surface-container-low flex items-center justify-between" data-val="Never expires" type="button"><span>Never expires</span></button>
+</div>
+</div>
+<button class="flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" id="lockModalBtn" title="Lock with password" type="button">
+<span class="material-symbols-outlined text-[15px] text-outline">lock</span>
+<span>Password</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-error-container text-outline hover:text-on-error-container flex items-center justify-center transition-colors" id="clearBtn" title="Clear Editor" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+</button>
+<div class="relative">
+<button class="flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" id="sharePopoverToggle" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">qr_code_scanner</span>
+<span>Share</span>
+</button>
+<div class="hidden absolute right-0 top-full mt-2 w-72 bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_-4px_rgba(15,23,42,0.1)] p-4 z-50" id="sharePopover">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Scan &amp; Connect</span>
+<span class="font-code-meta text-code-meta text-primary bg-primary-fixed/40 px-1.5 py-0.5 rounded-full">Encrypted</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col items-center justify-center mb-3">
+<svg class="w-28 h-28 text-on-surface" fill="currentColor" viewbox="0 0 100 100">
+<rect height="30" rx="4" width="30" x="0" y="0"></rect>
+<rect fill="#ffffff" height="18" rx="2" width="18" x="6" y="6"></rect>
+<rect height="10" rx="1" width="10" x="10" y="10"></rect>
+<rect height="30" rx="4" width="30" x="70" y="0"></rect>
+<rect fill="#ffffff" height="18" rx="2" width="18" x="76" y="6"></rect>
+<rect height="10" rx="1" width="10" x="80" y="10"></rect>
+<rect height="30" rx="4" width="30" x="0" y="70"></rect>
+<rect fill="#ffffff" height="18" rx="2" width="18" x="6" y="76"></rect>
+<rect height="10" rx="1" width="10" x="10" y="80"></rect>
+<rect height="8" rx="1" width="8" x="40" y="10"></rect>
+<rect height="8" rx="1" width="8" x="52" y="10"></rect>
+<rect height="16" rx="1" width="8" x="40" y="24"></rect>
+<rect height="8" rx="1" width="12" x="52" y="32"></rect>
+<rect height="14" rx="1" width="8" x="70" y="44"></rect>
+<rect height="8" rx="1" width="8" x="84" y="40"></rect>
+<rect height="8" rx="1" width="16" x="10" y="42"></rect>
+<rect height="8" rx="1" width="16" x="32" y="52"></rect>
+<rect height="18" rx="1" width="8" x="52" y="52"></rect>
+<rect height="12" rx="1" width="12" x="70" y="70"></rect>
+<rect height="18" rx="1" width="8" x="86" y="74"></rect>
+<rect height="14" rx="1" width="12" x="40" y="76"></rect>
+</svg>
+<span class="font-code-meta text-code-meta text-outline mt-2">Scan with camera to sync</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-low p-1.5 rounded-lg">
+<input class="bg-transparent font-code-meta text-code-meta text-on-surface-variant flex-1 outline-none px-1" readonly="" type="text" value="https://clipsync.app/r/dev-ssh-staging"/>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm px-2.5 py-1 rounded-md transition-all active:scale-95 shadow-sm" id="copyShareUrlBtn" type="button">Copy</button>
+</div>
+</div>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-95" id="copyAllTopBtn" type="button">
+<span class="material-symbols-outlined text-[17px]">content_copy</span>
+<span>Copy All</span>
+</button>
+</div>
+</div>
+<div class="flex-1 w-full flex relative pb-16">
+<div class="hidden md:flex flex-col select-none py-6 pl-6 pr-3 text-right font-code-editor text-code-editor text-outline/40 leading-[26px] bg-surface-container-lowest/30" id="lineNumbers">
+<span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+</div>
+<div class="flex-1 relative flex flex-col p-4 md:p-6">
+<textarea class="w-full h-full min-h-[580px] bg-transparent resize-none outline-none font-code-editor text-code-editor text-on-surface placeholder:text-outline/40 placeholder:font-body-md placeholder:text-body-md leading-[26px] tracking-normal selection:bg-primary-fixed selection:text-on-primary-fixed caret-primary" id="clipCanvas" placeholder="Start typing or paste here... changes sync instantly across all devices." spellcheck="false"># PRODUCTION INGRESS AUTH &amp; STAGING ENVIRONMENT SECRETS
+# Synced via ClipSync live P2P protocol • AES-GCM-256
+
+export KUBE_CONTEXT="prod-east-cluster-01"
+export TAILSCALE_AUTHKEY="tskey-auth-k7A9b42LM1990x-secureSyncEphem"
+
+# Direct curl test for health probe:
+curl -X GET "https://api.internal.network/v2/handshake" \
+  -H "Authorization: Bearer clip_sync_live_942_tok_9918" \
+  -H "Content-Type: application/json" \
+  --data '{"peer_id": "us-east-worker", "keep_alive": 300}'
+
+# Staging Gateway Configuration Note:
+# Update TLS certificate pin hash before deploying container revision 1.48
+# Contact @alex-ops on Slack for unseal token</textarea>
+<div class="absolute right-8 top-8 opacity-40 hover:opacity-100 transition-opacity pointer-events-none sm:pointer-events-auto">
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-md text-outline font-code-meta text-code-meta">
+<span>Format: Shell / Config</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-72 right-0 h-10 bg-surface-container-lowest/95 backdrop-blur-md px-gutter-desktop flex items-center justify-between z-30 shadow-[0_-1px_6px_rgba(11,28,48,0.03)]">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium" id="syncStatus">Saved to cloud (synced 2s ago)</span>
+</div>
+<span class="text-outline/40">•</span>
+<span class="font-code-meta text-code-meta text-outline hidden sm:inline">P2P Mesh: 0 packet loss</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low/80 px-2.5 py-0.5 rounded-full">
+<div class="flex -space-x-1.5 items-center">
+<div class="w-4 h-4 rounded-full bg-primary text-on-primary font-code-meta text-[9px] flex items-center justify-center ring-1 ring-surface-container-lowest" title="You (Desktop)">Y</div>
+<div class="w-4 h-4 rounded-full bg-tertiary-container text-on-tertiary font-code-meta text-[9px] flex items-center justify-center ring-1 ring-surface-container-lowest" title="Anonymous Peer (Mobile)">A</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">2 viewers live</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+<div class="flex items-center gap-space-sm text-outline">
+<span class="font-code-meta text-code-meta" id="statChars">482 characters</span>
+<span class="text-outline/40">•</span>
+<span class="font-code-meta text-code-meta" id="statWords">68 words</span>
+<span class="text-outline/40 hidden md:inline">•</span>
+<span class="font-code-meta text-code-meta hidden md:inline">UTF-8</span>
+</div>
+</div>
+<div class="fixed bottom-14 left-1/2 -translate-x-1/2 px-4 py-2 rounded-xl bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shadow-[0_12px_32px_-4px_rgba(15,23,42,0.18)] flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-200 transform translate-y-2 z-50" id="toastNotification">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">check_circle</span>
+<span id="toastMessage">Copied to clipboard</span>
+</div>
+</div>
+<script>
+  (() => {
+    const textarea = document.getElementById('clipCanvas');
+    const lineNumbers = document.getElementById('lineNumbers');
+    const statChars = document.getElementById('statChars');
+    const statWords = document.getElementById('statWords');
+    const syncStatus = document.getElementById('syncStatus');
+    const toast = document.getElementById('toastNotification');
+    const toastMessage = document.getElementById('toastMessage');
+
+    const showToast = (msg) => {
+      toastMessage.textContent = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 1800);
+    };
+
+    const updateMetrics = () => {
+      const val = textarea.value;
+      statChars.textContent = `${val.length} characters`;
+      const words = val.trim() ? val.trim().split(/\s+/).length : 0;
+      statWords.textContent = `${words} words`;
+
+      const linesCount = Math.max(val.split('\n').length, 12);
+      let linesHtml = '';
+      for (let i = 1; i <= linesCount; i++) {
+        linesHtml += `<span>${i}</span>`;
+      }
+      lineNumbers.innerHTML = linesHtml;
+    };
+
+    let syncTimer;
+    textarea.addEventListener('input', () => {
+      updateMetrics();
+      syncStatus.textContent = 'Syncing...';
+      clearTimeout(syncTimer);
+      syncTimer = setTimeout(() => {
+        syncStatus.textContent = 'Saved to cloud (synced just now)';
+      }, 600);
+    });
+
+    const copyText = (txt, label) => {
+      navigator.clipboard.writeText(txt).then(() => {
+        showToast(label);
+      }).catch(() => {
+        showToast('Unable to copy');
+      });
+    };
+
+    document.getElementById('copyAllTopBtn')?.addEventListener('click', () => {
+      copyText(textarea.value, 'All content copied');
+    });
+
+    document.getElementById('copyUrlBtn')?.addEventListener('click', () => {
+      copyText('https://clipsync.app/r/dev-ssh-staging', 'Link copied to clipboard');
+    });
+
+    document.getElementById('copyShareUrlBtn')?.addEventListener('click', () => {
+      copyText('https://clipsync.app/r/dev-ssh-staging', 'Share link copied');
+    });
+
+    document.getElementById('clearBtn')?.addEventListener('click', () => {
+      if (confirm('Clear entire clipboard text?')) {
+        textarea.value = '';
+        updateMetrics();
+        showToast('Clipboard cleared');
+      }
+    });
+
+    const shareToggle = document.getElementById('sharePopoverToggle');
+    const sharePopover = document.getElementById('sharePopover');
+    shareToggle?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      sharePopover.classList.toggle('hidden');
+    });
+
+    const expiryBtn = document.getElementById('expiryDropdownBtn');
+    const expiryMenu = document.getElementById('expiryMenu');
+    expiryBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      expiryMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.expiry-option').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const val = btn.getAttribute('data-val');
+        document.getElementById('currentExpiry').textContent = val;
+        expiryMenu.classList.add('hidden');
+        showToast(`Expiry updated to ${val}`);
+      });
+    });
+
+    document.addEventListener('click', () => {
+      sharePopover?.classList.add('hidden');
+      expiryMenu?.classList.add('hidden');
+    });
+
+    sharePopover?.addEventListener('click', e => e.stopPropagation());
+    expiryMenu?.addEventListener('click', e => e.stopPropagation());
+
+    document.getElementById('slugPill')?.addEventListener('click', () => {
+      const current = document.getElementById('slugText').textContent;
+      const next = prompt('Enter new custom room slug:', current);
+      if (next && next.trim()) {
+        document.getElementById('slugText').textContent = next.trim().toLowerCase().replace(/[^a-z0-9-_]/g, '-');
+        showToast('Slug updated');
+      }
+    });
+
+    document.getElementById('lockModalBtn')?.addEventListener('click', () => {
+      const pass = prompt('Set a passphrase to encrypt this live clip:');
+      if (pass) {
+        showToast('Passphrase applied • E2E Enabled');
+      }
+    });
+
+    updateMetrics();
+  })();
+</script></main></div></body></html>

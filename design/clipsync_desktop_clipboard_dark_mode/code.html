@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "bg-base": "#13161c",
+        "surface-sidebar": "#191c23",
+        "surface-card": "#20242d",
+        "surface-card-hover": "#272c37",
+        "hairline": "#2e3442",
+        "primary": "#10b981",
+        "primary-hover": "#059669",
+        "primary-dark": "#065f46",
+        "primary-light": "#34d399",
+        "text-primary": "#f3f4f6",
+        "text-secondary": "#94a3b8",
+        "text-muted": "#64748b",
+        "text-code": "#e2e8f0"
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        full: "9999px"
+      },
+      spacing: {
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem",
+        "space-md": "0.75rem",
+        "space-lg": "1.25rem",
+        "space-xl": "2rem",
+        "gutter": "1rem",
+        "gutter-desktop": "1.5rem"
+      },
+      fontFamily: {
+        "body": ["Inter", "sans-serif"],
+        "code": ["JetBrains Mono", "monospace"]
+      }
+    }
+  }
+};</script></head><body class="bg-bg-base font-body text-text-primary antialiased min-h-screen selection:bg-primary/30 selection:text-primary-light"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-sidebar border-r border-hairline z-40 flex flex-col justify-between"><div class="flex flex-col"><div class="h-14 px-gutter flex items-center gap-space-sm border-b border-hairline/60"><div class="w-7 h-7 rounded-lg bg-primary flex items-center justify-center text-bg-base font-bold shadow-sm shadow-primary/20"><span class="material-symbols-outlined text-[18px]">content_paste</span></div><span class="text-[17px] font-semibold tracking-tight text-text-primary">ClipSync</span><span class="font-code text-[11px] text-primary bg-primary/10 border border-primary/20 px-1.5 py-0.5 rounded-full ml-auto font-medium">v2.4</span></div><div class="px-gutter pt-space-md pb-space-sm"><button class="w-full flex items-center justify-center gap-space-sm bg-primary hover:bg-primary-hover text-gray-950 py-space-sm px-space-md rounded-lg font-medium text-[13px] shadow-sm shadow-primary/25 transition-all active:scale-[0.98]" type="button"><span class="material-symbols-outlined text-[18px] font-semibold">add</span><span class="font-semibold">New Snippet</span><span class="ml-auto font-code text-[11px] opacity-80 font-medium">⌘N</span></button></div><div class="px-gutter py-space-xs"><div class="text-[11px] font-medium uppercase tracking-wider text-text-muted px-space-xs mb-space-xs">Workspace</div><nav class="space-y-1"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg transition-colors bg-surface-card border border-hairline text-text-primary font-medium" data-path="live-clipboard" href="#"><span class="material-symbols-outlined text-[20px] text-primary">stream</span><span class="flex-1 truncate text-[14px]">Live Clipboard</span><span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse"></span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-[14px] text-text-secondary transition-colors hover:bg-surface-card hover:text-text-primary" data-path="history-archive" href="#"><span class="material-symbols-outlined text-[20px] text-text-muted">history</span><span class="flex-1 truncate">Clip History</span><span class="font-code text-[11px] text-text-muted">48</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-[14px] text-text-secondary transition-colors hover:bg-surface-card hover:text-text-primary" data-path="pinned-clips" href="#"><span class="material-symbols-outlined text-[20px] text-text-muted">push_pin</span><span class="flex-1 truncate">Pinned Clips</span><span class="font-code text-[11px] text-text-muted">7</span></a></nav></div><div class="px-gutter pt-space-md"><div class="text-[11px] font-medium uppercase tracking-wider text-text-muted px-space-xs mb-space-xs">Channels</div><nav class="space-y-1"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-[14px] text-text-secondary transition-colors hover:bg-surface-card hover:text-text-primary" data-path="device-sync" href="#"><span class="material-symbols-outlined text-[20px] text-text-muted">devices</span><span class="flex-1 truncate">Connected Devices</span><span class="font-code text-[11px] text-primary bg-primary/10 border border-primary/20 px-1 rounded-sm">3</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-[14px] text-text-secondary transition-colors hover:bg-surface-card hover:text-text-primary" data-path="room-security" href="#"><span class="material-symbols-outlined text-[20px] text-text-muted">lock_open</span><span class="flex-1 truncate">E2E Encryption</span></a></nav></div></div><div class="p-gutter"><div class="p-space-sm rounded-lg bg-surface-card border border-hairline flex items-center justify-between shadow-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">sync_alt</span><div class="flex flex-col"><span class="text-[11px] font-semibold text-text-primary">P2P Sync</span><span class="font-code text-[11px] text-text-muted">12ms latency</span></div></div><div class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(16,185,129,0.7)]"></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-14 bg-bg-base/90 backdrop-blur-xl border-b border-hairline z-30 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-card hover:bg-surface-card-hover border border-hairline px-space-sm py-1 rounded-full cursor-pointer transition-colors"><span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_6px_rgba(16,185,129,0.8)]"></span><span class="font-code text-[12px] text-text-secondary font-medium">clipsync.live/r/942-alpha</span><span class="material-symbols-outlined text-[15px] text-text-muted hover:text-text-primary transition-colors">content_copy</span></div><div class="hidden sm:flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/25 text-primary-light font-code text-[11px] font-medium"><span class="material-symbols-outlined text-[14px] text-primary">bolt</span><span>Instant Sync Live</span></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-card hover:bg-surface-card-hover border border-hairline text-[12px] font-medium text-text-secondary hover:text-text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">qr_code_2</span><span>Pair Mobile</span></button><button class="flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-card hover:bg-surface-card-hover border border-hairline text-[12px] font-medium text-text-secondary hover:text-text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">share</span><span>Invite</span></button><button aria-label="Toggle Theme" class="w-8 h-8 rounded-lg flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-card border border-transparent hover:border-hairline transition-colors" title="Dark mode enabled (Switch theme)" type="button"><span class="material-symbols-outlined text-[20px] text-amber-300">light_mode</span></button><div class="w-8 h-8 rounded-full bg-primary text-gray-950 font-bold flex items-center justify-center ring-2 ring-primary/20"><span class="material-symbols-outlined text-[18px]">person</span></div></div></header><main class="flex-1 pt-14 bg-bg-base w-full"><div class="flex flex-col w-full relative">
+<div class="px-gutter-desktop py-space-sm bg-surface-card/60 backdrop-blur-md border-b border-hairline flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-primary/10 border border-primary/20 px-space-sm py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-code text-[11px] text-primary-light font-semibold tracking-tight">ACTIVE CLIP</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-card hover:bg-surface-card-hover border border-hairline px-space-sm py-1 rounded-lg transition-colors group cursor-pointer" id="slugPill" title="Click to rename slug">
+<span class="font-code text-[12px] text-text-muted select-none">clipsync.app/</span>
+<span class="font-code text-[12px] font-semibold text-text-primary" id="slugText">dev-ssh-staging</span>
+<span class="material-symbols-outlined text-[14px] text-text-muted group-hover:text-primary transition-colors">edit</span>
+</div>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-card hover:bg-surface-card-hover border border-hairline text-text-secondary hover:text-text-primary transition-all active:scale-95" id="copyUrlBtn" title="Copy room link" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">link</span>
+<span class="text-[12px] font-medium">Copy Link</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center bg-surface-card border border-hairline p-0.5 rounded-lg">
+<button class="px-2.5 py-1 rounded-md text-text-secondary hover:text-text-primary text-[12px] font-medium transition-all" id="modePlain" type="button">Plain</button>
+<button class="px-2.5 py-1 rounded-md bg-surface-sidebar text-text-primary font-medium text-[12px] border border-hairline/80 shadow-sm transition-all" id="modeCode" type="button">Code / MD</button>
+</div>
+<div class="relative">
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-surface-card hover:bg-surface-card-hover border border-hairline text-text-secondary hover:text-text-primary text-[12px] font-medium transition-colors" id="expiryDropdownBtn" type="button">
+<span class="material-symbols-outlined text-[15px] text-text-muted">timer</span>
+<span id="currentExpiry">24 hours</span>
+<span class="material-symbols-outlined text-[14px] text-text-muted">expand_more</span>
+</button>
+<div class="hidden absolute right-0 top-full mt-1.5 w-40 bg-surface-card border border-hairline rounded-xl shadow-2xl py-1.5 z-50" id="expiryMenu">
+<button class="expiry-option w-full text-left px-3 py-1.5 text-[12px] font-medium text-text-secondary hover:text-text-primary hover:bg-surface-card-hover flex items-center justify-between" data-val="1 hour" type="button"><span>1 hour</span></button>
+<button class="expiry-option w-full text-left px-3 py-1.5 text-[12px] font-medium text-text-primary hover:bg-surface-card-hover flex items-center justify-between" data-val="24 hours" type="button"><span>24 hours</span><span class="material-symbols-outlined text-[14px] text-primary">check</span></button>
+<button class="expiry-option w-full text-left px-3 py-1.5 text-[12px] font-medium text-text-secondary hover:text-text-primary hover:bg-surface-card-hover flex items-center justify-between" data-val="7 days" type="button"><span>7 days</span></button>
+<button class="expiry-option w-full text-left px-3 py-1.5 text-[12px] font-medium text-text-secondary hover:text-text-primary hover:bg-surface-card-hover flex items-center justify-between" data-val="Never expires" type="button"><span>Never expires</span></button>
+</div>
+</div>
+<button class="flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-card hover:bg-surface-card-hover border border-hairline text-text-secondary hover:text-text-primary text-[12px] font-medium transition-colors" id="lockModalBtn" title="Lock with password" type="button">
+<span class="material-symbols-outlined text-[15px] text-text-muted">lock</span>
+<span>Password</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-card hover:bg-red-500/10 border border-hairline hover:border-red-500/30 text-text-muted hover:text-red-400 flex items-center justify-center transition-colors" id="clearBtn" title="Clear Editor" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+</button>
+<div class="relative">
+<button class="flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-card hover:bg-surface-card-hover border border-hairline text-text-secondary hover:text-text-primary text-[12px] font-medium transition-colors" id="sharePopoverToggle" type="button">
+<span class="material-symbols-outlined text-[16px] text-text-muted">qr_code_scanner</span>
+<span>Share</span>
+</button>
+<div class="hidden absolute right-0 top-full mt-2 w-72 bg-surface-card border border-hairline rounded-xl shadow-2xl p-4 z-50" id="sharePopover">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[13px] font-semibold text-text-primary">Scan &amp; Connect</span>
+<span class="font-code text-[11px] text-primary bg-primary/10 border border-primary/20 px-1.5 py-0.5 rounded-full">Encrypted</span>
+</div>
+<div class="bg-bg-base border border-hairline p-3 rounded-lg flex flex-col items-center justify-center mb-3">
+<svg class="w-28 h-28 text-text-primary" fill="currentColor" viewbox="0 0 100 100">
+<rect height="30" rx="4" width="30" x="0" y="0"></rect>
+<rect fill="#13161c" height="18" rx="2" width="18" x="6" y="6"></rect>
+<rect height="10" rx="1" width="10" x="10" y="10"></rect>
+<rect height="30" rx="4" width="30" x="70" y="0"></rect>
+<rect fill="#13161c" height="18" rx="2" width="18" x="76" y="6"></rect>
+<rect height="10" rx="1" width="10" x="80" y="10"></rect>
+<rect height="30" rx="4" width="30" x="0" y="70"></rect>
+<rect fill="#13161c" height="18" rx="2" width="18" x="6" y="76"></rect>
+<rect height="10" rx="1" width="10" x="10" y="80"></rect>
+<rect height="8" rx="1" width="8" x="40" y="10"></rect>
+<rect height="8" rx="1" width="8" x="52" y="10"></rect>
+<rect height="16" rx="1" width="8" x="40" y="24"></rect>
+<rect height="8" rx="1" width="12" x="52" y="32"></rect>
+<rect height="14" rx="1" width="8" x="70" y="44"></rect>
+<rect height="8" rx="1" width="8" x="84" y="40"></rect>
+<rect height="8" rx="1" width="16" x="10" y="42"></rect>
+<rect height="8" rx="1" width="16" x="32" y="52"></rect>
+<rect height="18" rx="1" width="8" x="52" y="52"></rect>
+<rect height="12" rx="1" width="12" x="70" y="70"></rect>
+<rect height="18" rx="1" width="8" x="86" y="74"></rect>
+<rect height="14" rx="1" width="12" x="40" y="76"></rect>
+</svg>
+<span class="font-code text-[11px] text-text-muted mt-2">Scan with camera to sync</span>
+</div>
+<div class="flex items-center gap-1.5 bg-bg-base border border-hairline p-1.5 rounded-lg">
+<input class="bg-transparent font-code text-[11px] text-text-secondary flex-1 outline-none px-1" readonly="" type="text" value="https://clipsync.app/r/dev-ssh-staging"/>
+<button class="bg-primary hover:bg-primary-hover text-gray-950 font-semibold text-[11px] px-2.5 py-1 rounded-md transition-all active:scale-95 shadow-sm" id="copyShareUrlBtn" type="button">Copy</button>
+</div>
+</div>
+</div>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-gray-950 font-semibold text-[13px] shadow-sm shadow-primary/20 transition-all active:scale-95" id="copyAllTopBtn" type="button">
+<span class="material-symbols-outlined text-[17px] font-semibold">content_copy</span>
+<span>Copy All</span>
+</button>
+</div>
+</div>
+<div class="flex-1 w-full flex relative pb-16">
+<div class="hidden md:flex flex-col select-none py-6 pl-6 pr-4 text-right font-code text-[13px] text-text-muted/70 leading-[26px] bg-bg-base border-r border-hairline/60" id="lineNumbers">
+<span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+</div>
+<div class="flex-1 relative flex flex-col p-4 md:p-6 bg-bg-base">
+<textarea class="w-full h-full min-h-[580px] bg-transparent resize-none outline-none font-code text-[13px] text-text-code placeholder:text-text-muted/40 placeholder:font-body placeholder:text-[14px] leading-[26px] tracking-normal selection:bg-primary/25 selection:text-primary-light caret-primary" id="clipCanvas" placeholder="Start typing or paste here... changes sync instantly across all devices." spellcheck="false"># PRODUCTION INGRESS AUTH &amp; STAGING ENVIRONMENT SECRETS
+# Synced via ClipSync live P2P protocol • AES-GCM-256
+
+export KUBE_CONTEXT="prod-east-cluster-01"
+export TAILSCALE_AUTHKEY="tskey-auth-k7A9b42LM1990x-secureSyncEphem"
+
+# Direct curl test for health probe:
+curl -X GET "https://api.internal.network/v2/handshake" \
+  -H "Authorization: Bearer clip_sync_live_942_tok_9918" \
+  -H "Content-Type: application/json" \
+  --data '{"peer_id": "us-east-worker", "keep_alive": 300}'
+
+# Staging Gateway Configuration Note:
+# Update TLS certificate pin hash before deploying container revision 1.48
+# Contact @alex-ops on Slack for unseal token</textarea>
+<div class="absolute right-8 top-8 opacity-60 hover:opacity-100 transition-opacity pointer-events-none sm:pointer-events-auto">
+<div class="flex items-center gap-1 bg-surface-card border border-hairline px-2.5 py-1 rounded-md text-text-muted font-code text-[11px]">
+<span>Format: Shell / Config</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-72 right-0 h-10 bg-surface-sidebar/95 backdrop-blur-md border-t border-hairline px-gutter-desktop flex items-center justify-between z-30">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse"></span>
+<span class="text-[12px] text-text-secondary font-medium" id="syncStatus">Saved to cloud (synced 2s ago)</span>
+</div>
+<span class="text-text-muted/40">•</span>
+<span class="font-code text-[11px] text-text-muted hidden sm:inline">P2P Mesh: 0 packet loss</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-card border border-hairline/80 px-2.5 py-0.5 rounded-full">
+<div class="flex -space-x-1.5 items-center">
+<div class="w-4 h-4 rounded-full bg-primary text-gray-950 font-code font-bold text-[9px] flex items-center justify-center ring-1 ring-surface-sidebar" title="You (Desktop)">Y</div>
+<div class="w-4 h-4 rounded-full bg-emerald-700 text-text-primary font-code font-bold text-[9px] flex items-center justify-center ring-1 ring-surface-sidebar" title="Anonymous Peer (Mobile)">A</div>
+</div>
+<span class="text-[12px] text-text-primary font-medium">2 viewers live</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_6px_rgba(16,185,129,0.8)]"></span>
+</div>
+<div class="flex items-center gap-space-sm text-text-muted">
+<span class="font-code text-[11px] text-text-secondary" id="statChars">482 characters</span>
+<span class="text-text-muted/40">•</span>
+<span class="font-code text-[11px] text-text-secondary" id="statWords">68 words</span>
+<span class="text-text-muted/40 hidden md:inline">•</span>
+<span class="font-code text-[11px] text-text-muted hidden md:inline">UTF-8</span>
+</div>
+</div>
+<div class="fixed bottom-14 left-1/2 -translate-x-1/2 px-4 py-2 rounded-xl bg-surface-card border border-hairline text-text-primary text-[13px] font-medium shadow-2xl flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-200 transform translate-y-2 z-50" id="toastNotification">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span id="toastMessage">Copied to clipboard</span>
+</div>
+</div>
+<script>
+  (() => {
+    const textarea = document.getElementById('clipCanvas');
+    const lineNumbers = document.getElementById('lineNumbers');
+    const statChars = document.getElementById('statChars');
+    const statWords = document.getElementById('statWords');
+    const syncStatus = document.getElementById('syncStatus');
+    const toast = document.getElementById('toastNotification');
+    const toastMessage = document.getElementById('toastMessage');
+
+    const showToast = (msg) => {
+      toastMessage.textContent = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 1800);
+    };
+
+    const updateMetrics = () => {
+      const val = textarea.value;
+      statChars.textContent = `${val.length} characters`;
+      const words = val.trim() ? val.trim().split(/\s+/).length : 0;
+      statWords.textContent = `${words} words`;
+
+      const linesCount = Math.max(val.split('\n').length, 14);
+      let linesHtml = '';
+      for (let i = 1; i <= linesCount; i++) {
+        linesHtml += `<span>${i}</span>`;
+      }
+      lineNumbers.innerHTML = linesHtml;
+    };
+
+    let syncTimer;
+    textarea.addEventListener('input', () => {
+      updateMetrics();
+      syncStatus.textContent = 'Syncing...';
+      clearTimeout(syncTimer);
+      syncTimer = setTimeout(() => {
+        syncStatus.textContent = 'Saved to cloud (synced just now)';
+      }, 600);
+    });
+
+    const copyText = (txt, label) => {
+      navigator.clipboard.writeText(txt).then(() => {
+        showToast(label);
+      }).catch(() => {
+        showToast('Unable to copy');
+      });
+    };
+
+    document.getElementById('copyAllTopBtn')?.addEventListener('click', () => {
+      copyText(textarea.value, 'All content copied');
+    });
+
+    document.getElementById('copyUrlBtn')?.addEventListener('click', () => {
+      copyText('https://clipsync.app/r/dev-ssh-staging', 'Link copied to clipboard');
+    });
+
+    document.getElementById('copyShareUrlBtn')?.addEventListener('click', () => {
+      copyText('https://clipsync.app/r/dev-ssh-staging', 'Share link copied');
+    });
+
+    document.getElementById('clearBtn')?.addEventListener('click', () => {
+      if (confirm('Clear entire clipboard text?')) {
+        textarea.value = '';
+        updateMetrics();
+        showToast('Clipboard cleared');
+      }
+    });
+
+    const shareToggle = document.getElementById('sharePopoverToggle');
+    const sharePopover = document.getElementById('sharePopover');
+    shareToggle?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      sharePopover.classList.toggle('hidden');
+    });
+
+    const expiryBtn = document.getElementById('expiryDropdownBtn');
+    const expiryMenu = document.getElementById('expiryMenu');
+    expiryBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      expiryMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.expiry-option').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const val = btn.getAttribute('data-val');
+        document.getElementById('currentExpiry').textContent = val;
+        expiryMenu.classList.add('hidden');
+        showToast(`Expiry updated to ${val}`);
+      });
+    });
+
+    document.addEventListener('click', () => {
+      sharePopover?.classList.add('hidden');
+      expiryMenu?.classList.add('hidden');
+    });
+
+    sharePopover?.addEventListener('click', e => e.stopPropagation());
+    expiryMenu?.addEventListener('click', e => e.stopPropagation());
+
+    document.getElementById('slugPill')?.addEventListener('click', () => {
+      const current = document.getElementById('slugText').textContent;
+      const next = prompt('Enter new custom room slug:', current);
+      if (next && next.trim()) {
+        document.getElementById('slugText').textContent = next.trim().toLowerCase().replace(/[^a-z0-9-_]/g, '-');
+        showToast('Slug updated');
+      }
+    });
+
+    document.getElementById('lockModalBtn')?.addEventListener('click', () => {
+      const pass = prompt('Set a passphrase to encrypt this live clip:');
+      if (pass) {
+        showToast('Passphrase applied • E2E Enabled');
+      }
+    });
+
+    updateMetrics();
+  })();
+</script></main></div></body></html>

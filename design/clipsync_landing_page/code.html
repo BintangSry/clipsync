@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClipSync — Instant Real-Time Clipboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-full bg-[#f8f9ff] text-slate-800 font-sans antialiased flex flex-col selection:bg-brand-100 selection:text-brand-800">
+
+  <!-- Top Navigation Header -->
+  <header class="w-full max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="#" class="flex items-center gap-2.5 group">
+      <div class="w-8 h-8 rounded-lg bg-white border border-slate-200/80 shadow-xs flex items-center justify-center text-brand-600 transition group-hover:border-brand-500/40">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8Z"></path>
+          <path d="M15 3v5h5"></path>
+          <path d="m9 14 2 2 4-4"></path>
+        </svg>
+      </div>
+      <span class="font-semibold text-base tracking-tight text-slate-900">ClipSync</span>
+      <span class="text-[11px] font-mono px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 border border-brand-200/60 font-medium ml-1">v2.4</span>
+    </a>
+
+    <!-- Top Right Links & Status -->
+    <div class="flex items-center gap-5">
+      <div class="hidden sm:flex items-center gap-2 text-xs text-slate-500 font-mono">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Mesh Network Active</span>
+      </div>
+      <a href="#" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition">How it works</a>
+      <a href="#" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Security</a>
+      <button class="p-2 text-slate-500 hover:text-slate-800 rounded-lg hover:bg-slate-200/50 transition" aria-label="Toggle theme">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="flex-1 flex flex-col justify-center max-w-4xl w-full mx-auto px-6 py-12 md:py-20 text-center">
+    
+    <!-- Hero Headline & Subhead -->
+    <div class="space-y-4 max-w-2xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200/80 shadow-2xs text-xs font-medium text-slate-600 mb-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+        <span>Zero configuration • End-to-end encrypted</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-[3.5rem] font-bold text-slate-900 tracking-tight leading-[1.15]">
+        Write on one device,<br class="hidden sm:inline" /> see it everywhere.
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-600 font-normal leading-relaxed pt-1">
+        No sign-up. Just open a clipboard and start typing.
+      </p>
+    </div>
+
+    <!-- Main Focal Point: Interactive URL Creator Box -->
+    <div class="mt-10 sm:mt-12 w-full max-w-xl mx-auto">
+      <div class="p-2 sm:p-2.5 bg-white rounded-2xl border border-slate-200/90 shadow-[0_8px_30px_rgb(0,0,0,0.04)] focus-within:ring-2 focus-within:ring-brand-500/20 focus-within:border-brand-500 transition-all duration-200">
+        <form class="flex flex-col sm:flex-row items-stretch gap-2" onsubmit="event.preventDefault();">
+          
+          <!-- Input field with prefix -->
+          <div class="flex-1 flex items-center px-4 py-3 sm:py-2.5 rounded-xl bg-slate-50/70 border border-slate-200/60 focus-within:bg-white focus-within:border-slate-300 transition">
+            <span class="font-mono text-sm sm:text-base text-slate-400 select-none tracking-tight">clipsync.app/</span>
+            <input 
+              type="text" 
+              placeholder="my-notes" 
+              value="my-notes"
+              class="w-full bg-transparent border-0 focus:outline-none font-mono text-sm sm:text-base text-slate-900 font-medium placeholder:text-slate-300 pl-0.5"
+              spellcheck="false"
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- Primary Action Button -->
+          <button 
+            type="submit" 
+            class="px-6 py-3.5 sm:py-3 rounded-xl bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-medium text-sm sm:text-base shadow-sm hover:shadow transition flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer">
+            <span>Open Clipboard</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Secondary Action: Random Generation -->
+      <div class="mt-4 flex items-center justify-center gap-2">
+        <button type="button" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-500 hover:text-brand-700 transition group py-1 px-2.5 rounded-lg hover:bg-white/80">
+          <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-brand-600 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"></path>
+          </svg>
+          <span>Generate random clipboard</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 3 Simple Steps Section -->
+    <div class="mt-16 sm:mt-24 pt-10 border-t border-slate-200/60 max-w-3xl mx-auto w-full">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 text-center">
+        
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center group">
+          <div class="w-11 h-11 rounded-xl bg-white border border-slate-200/80 shadow-2xs flex items-center justify-center text-slate-600 mb-3.5 group-hover:border-brand-500/50 group-hover:text-brand-600 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+          </div>
+          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1">Step 1</span>
+          <p class="text-sm font-medium text-slate-800">
+            Pick a name
+          </p>
+          <span class="text-xs text-slate-500 mt-1">Choose any URL slug or roll random</span>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center group">
+          <div class="w-11 h-11 rounded-xl bg-white border border-slate-200/80 shadow-2xs flex items-center justify-center text-slate-600 mb-3.5 group-hover:border-brand-500/50 group-hover:text-brand-600 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+              <path d="m7 8 5 3-5 3"></path>
+              <path d="M14 16h3"></path>
+            </svg>
+          </div>
+          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1">Step 2</span>
+          <p class="text-sm font-medium text-slate-800">
+            Type or paste
+          </p>
+          <span class="text-xs text-slate-500 mt-1">Changes broadcast live in milliseconds</span>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex flex-col items-center group">
+          <div class="w-11 h-11 rounded-xl bg-white border border-slate-200/80 shadow-2xs flex items-center justify-center text-slate-600 mb-3.5 group-hover:border-brand-500/50 group-hover:text-brand-600 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+              <path d="M12 18h.01"></path>
+            </svg>
+          </div>
+          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1">Step 3</span>
+          <p class="text-sm font-medium text-slate-800">
+            Open the same link on any device
+          </p>
+          <span class="text-xs text-slate-500 mt-1">Phone, laptop, tablet, or terminal</span>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="w-full max-w-6xl mx-auto px-6 py-8 border-t border-slate-200/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+    <div class="flex items-center gap-2">
+      <span>ClipSync © 2025</span>
+      <span class="text-slate-300">•</span>
+      <span>No cookies. No tracking.</span>
+    </div>
+
+    <!-- 2-3 Minimal Footer Links -->
+    <div class="flex items-center gap-6">
+      <a href="#" class="hover:text-slate-800 transition">Security & Encryption</a>
+      <a href="#" class="hover:text-slate-800 transition">API / CLI Tool</a>
+      <a href="#" class="hover:text-slate-800 transition">GitHub</a>
+    </div>
+  </footer>
+
+</body>
+</html>
